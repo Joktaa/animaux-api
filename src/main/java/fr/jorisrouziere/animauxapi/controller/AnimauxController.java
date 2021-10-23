@@ -4,7 +4,8 @@ import fr.jorisrouziere.animauxapi.model.Animal;
 import fr.jorisrouziere.animauxapi.service.AnimauxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -15,5 +16,10 @@ public class AnimauxController {
     @GetMapping("/animaux")
     public Iterable<Animal> getAnimaux() {
         return animauxService.getAnimaux();
+    }
+
+    @PostMapping("/animal")
+    public Animal addAnimal(@RequestBody Animal animal) {
+        return animal;
     }
 }
