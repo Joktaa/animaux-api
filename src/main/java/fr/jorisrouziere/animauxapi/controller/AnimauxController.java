@@ -1,5 +1,6 @@
 package fr.jorisrouziere.animauxapi.controller;
 
+import fr.jorisrouziere.animauxapi.DTO.AnimalDTO;
 import fr.jorisrouziere.animauxapi.model.Animal;
 import fr.jorisrouziere.animauxapi.service.AnimauxService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class AnimauxController {
     }
 
     @PostMapping("/animal")
-    public Animal addAnimal(@RequestBody Animal animal) {
-        return animal;
+    public Animal addAnimal(@RequestBody AnimalDTO animalDTO) {
+        return animauxService.addAnimal(animalDTO);
     }
 }

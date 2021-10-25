@@ -23,4 +23,9 @@ public class Sexe {
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_animal", nullable = false, referencedColumnName = "a_id")
     private Animal animal;
+
+    public Sexe(String description, Animal animal) {
+        this.description = description;
+        this.animal = animal;
+    }
 }

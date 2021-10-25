@@ -23,4 +23,9 @@ public class Geographie {
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_animal", nullable = false, referencedColumnName = "a_id")
     private Animal animal;
+
+    public Geographie(String description, Animal animal) {
+        this.description = description;
+        this.animal = animal;
+    }
 }
