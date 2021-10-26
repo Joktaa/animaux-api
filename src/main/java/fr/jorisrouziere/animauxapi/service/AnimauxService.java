@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AnimauxService {
@@ -19,8 +20,16 @@ public class AnimauxService {
         return animauxRepository.findAll();
     }
 
+    public Optional<Animal> getAnimal(final Long id) {
+        return animauxRepository.findById(id);
+    }
+
     public Animal addAnimal(AnimalDTO animalDTO) {
         return animauxRepository.save(convertDTOToEntity(animalDTO));
+    }
+
+    public void deleteAnimal(final Long id) {
+        animauxRepository.deleteById(id);
     }
 
     public Animal convertDTOToEntity(AnimalDTO animalDTO) {
