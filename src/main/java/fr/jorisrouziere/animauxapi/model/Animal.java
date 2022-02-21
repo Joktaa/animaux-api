@@ -32,6 +32,8 @@ public class Animal {
 
     private String uicn;
 
+    private String image;
+
     @JsonManagedReference
     @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
     private List<Physique> physiques;
@@ -52,7 +54,7 @@ public class Animal {
     @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
     private List<Geographie> geographies;
 
-    public Animal(String nom_commun, String genre, String espece, String embranchement, String sous_embranchement, String ordre, String uicn) {
+    public Animal(String nom_commun, String genre, String espece, String embranchement, String sous_embranchement, String ordre, String uicn, String image) {
         this.nom_commun = nom_commun;
         this.genre = genre;
         this.espece = espece;
@@ -60,5 +62,6 @@ public class Animal {
         this.sous_embranchement = sous_embranchement;
         this.ordre = ordre;
         this.uicn = uicn;
+        this.image = image;
     }
 }

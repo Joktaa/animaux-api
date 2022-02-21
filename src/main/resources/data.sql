@@ -15,6 +15,7 @@ CREATE TABLE `animaux`
     `sous_embranchement` VARCHAR(255),
     `ordre`              VARCHAR(255),
     `uicn`               VARCHAR(255),
+    `image`              VARCHAR(255),
     PRIMARY KEY (`a_id`)
 );
 
@@ -68,9 +69,9 @@ CREATE TABLE `geographie`
     FOREIGN KEY (id_animal) REFERENCES animaux (a_id)
 );
 
-INSERT INTO `animaux` (`nom_commun`, `genre`, `espece`, `embranchement`, `sous_embranchement`, `ordre`, `uicn`)
-VALUES ('Caelacanthe', 'Latimeria', 'Chalumnae', 'Chordes', 'Vertébré', 'Coelocanthiforme',
-        'Danger critique d extinction');
+INSERT INTO `animaux` (`nom_commun`, `genre`, `espece`, `embranchement`, `sous_embranchement`, `ordre`, `uicn`, `image`)
+VALUES ('Coelacanthe', 'Latimeria', 'Chalumnae', 'Chordes', 'Vertébré', 'Coelocanthiforme',
+        'Danger critique d extinction', 'coelacanthe.png');
 
 INSERT INTO `physique` (`id_animal`, `description`)
 VALUES (1, 'Peut dépasser les deux mètres');

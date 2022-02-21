@@ -40,7 +40,8 @@ public class AnimauxService {
                 animalDTO.getEmbranchement(),
                 animalDTO.getSous_embranchement(),
                 animalDTO.getOrdre(),
-                animalDTO.getUicn()
+                animalDTO.getUicn(),
+                animalDTO.getImage()
         );
 
         List<Physique> physiques = new ArrayList<>();

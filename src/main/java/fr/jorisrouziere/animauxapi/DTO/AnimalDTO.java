@@ -18,4 +18,5 @@ public class AnimalDTO {
     private List<VieDTO> vies;
     private List<ReproductionDTO> reproductions;
     private List<GeographieDTO> geographies;
+    private String image;
 }
