@@ -14,4 +14,8 @@
 - utilisateur : root
 - mdp : root
 
-- Pour des jeux de tests utiliser data.sql
+
+- refaire un `docker-compose up`
+
+
+- Pour des jeux de tests utiliser data.sql en lançant les insert
