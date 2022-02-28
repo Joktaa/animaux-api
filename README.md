@@ -23,6 +23,8 @@
 ##Heroku
 -Pour se connecter `heroku login`
 
+-Pour récuperer la branche de Heroku `heroku git:remote -a animaux-api`
+
 -Pour activer l'api `heroku ps:scale web=1`
 
 -Pour désactiver l'api `heroku ps:scale web=0`
