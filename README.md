@@ -20,7 +20,7 @@
 
 - Pour des jeux de tests utiliser data.sql en lançant les insert
 
-##Heroku
+## Heroku
 - Pour se connecter `heroku login`
 
 - Pour récuperer la branche de Heroku `heroku git:remote -a animaux-api`
@@ -33,7 +33,7 @@
 
 - Pour envoyer des modifications `heroku restart` -> `git push heroku master`
 
-##BDD Keroku
+## BDD Keroku
 
 - username :b518973ea6fdde
 
@@ -46,7 +46,7 @@
 
 - Connection: `mysql -u b518973ea6fdde -pef4a6705 -h eu-cdbr-west-02.cleardb.net`
 
-##Documentation de l'API
+## Documentation de l'API
 
 
 | HTTP request | Description
