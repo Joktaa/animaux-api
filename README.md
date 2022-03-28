@@ -46,10 +46,12 @@
 
 - Connection: `mysql -u b518973ea6fdde -pef4a6705 -h eu-cdbr-west-02.cleardb.net`
 
+##Documentation de l'API
 
 
-- Envoie des données de tests dans la BDD :
-`Get-Content [lien du dossier]\src\main\resources\data-heroku.sql | mysql -u b518973ea6fdde -pef4a6705 -h eu-cdbr-west-02.cleardb.net`
-
-
-
+| HTTP request | Description
+| ------------- | ------------
+| **GET** https://animaux-api.herokuapp.com/api/animaux | Récupère tous les animaux
+| **GET** https://animaux-api.herokuapp.com/api/animal/{id} | Récupère l'animal passé en paramètre
+| **POST** https://animaux-api.herokuapp.com/api/animal | Créer un animal
+| **DELETE** https://animaux-api.herokuapp.com/api/animal/{id}| Supprime l'animal passé en paramètre

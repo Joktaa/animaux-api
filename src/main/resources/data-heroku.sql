@@ -75,7 +75,7 @@ CREATE TABLE `geographie`
 
 INSERT INTO `animaux` (`nom_commun`, `genre`, `espece`, `embranchement`, `sous_embranchement`, `ordre`, `uicn`, `image`)
 VALUES ('Coelacanthe', 'Latimeria', 'Chalumnae', 'Chordes', 'Vertébré', 'Coelocanthiforme',
-    'Danger critique d extinction', 'coelacanthe.png');
+    'Danger critique d extinction', 'coelacanthe');
 
 INSERT INTO `physique` (`id_animal`, `description`)
 VALUES (1, 'Peut dépasser les deux mètres');
