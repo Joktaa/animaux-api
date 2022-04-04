@@ -1,4 +1,14 @@
 # Lancement
+##Introduction
+L'api Animaux regroupe une collection complète d'animaux et vous permet de les gérer facilement.
+
+Cette API prend en charge le type de média JSON et utilise le codage de caractères UTF-8.
+
+Elle est actuellement reliée à l'application de fiche Animal créé sous Android [Lien du GIT](https://github.com/Joktaa/Animaux)
+
+---
+## Technologies
+
 ## Gradle
 - version 17
 - build
@@ -45,6 +55,7 @@
 
 
 - Connection: `mysql -u b518973ea6fdde -pef4a6705 -h eu-cdbr-west-02.cleardb.net`
+- Data: data-heroku.sql
 
 ## Documentation de l'API
 
@@ -54,6 +65,8 @@
 | **GET** https://animaux-api.herokuapp.com/api/animal/{id} | Récupère l'animal passé en paramètre
 | **POST** https://animaux-api.herokuapp.com/api/animal | Créer un animal
 | **DELETE** https://animaux-api.herokuapp.com/api/animal/{id}| Supprime l'animal passé en paramètre
+
+---
 
 ## Postman Collection
 We have created a [Postman](https://www.postman.com) Collection so you can easily test all the API endpoints wihtout developing and code. You can download the collection [here](https://app.getpostman.com/run-collection/28d95a2cf88535ca1daf) or just click the button below.
