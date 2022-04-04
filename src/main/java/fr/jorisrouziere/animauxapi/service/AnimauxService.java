@@ -3,7 +3,7 @@ package fr.jorisrouziere.animauxapi.service;
 import fr.jorisrouziere.animauxapi.DTO.*;
 import fr.jorisrouziere.animauxapi.model.*;
 import fr.jorisrouziere.animauxapi.repository.AnimauxRepository;
-import lombok.Data;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,9 @@ import java.util.Optional;
 public class AnimauxService {
     @Autowired
     private AnimauxRepository animauxRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     public Iterable<Animal> getAnimaux() {
         return animauxRepository.findAll();
@@ -76,4 +79,10 @@ public class AnimauxService {
 
         return animal;
     }
+
+    public AnimalDTO convertEntityToDTO(Animal animal) {
+
+        return modelMapper.map(animal, AnimalDTO.class);
+    }
+
 }
