@@ -28,15 +28,16 @@ public class AnimauxController {
     @PostMapping("/animal")
     public Animal addAnimal(@RequestBody AnimalDTO animalDTO) {
         Animal animal = animauxService.convertDTOToEntity(animalDTO);
-        return (animauxService.addAnimal(animal));
+        return animauxService.saveAnimal(animal);
     }
 
     @PutMapping("/animal/{id}")
     public Animal putAnimal(@PathVariable("id") final Long id, @RequestBody AnimalDTO animalDTO) {
         Optional<Animal> animal = animauxService.getAnimal(id);
+        System.out.println(animal);
         if(animal.isPresent()) {
             Animal currentAnimal = animal.get();
-            Animal animalConvert= animauxService.convertDTOToEntity(animalDTO);
+            Animal animalConvert= animauxService.convertDTOToEntityMapper(animalDTO);
 
 
             String nom_commun=animalConvert.getNom_commun();
@@ -98,7 +99,9 @@ public class AnimauxController {
                 currentAnimal.setImage(image);
             }
 
-            animauxService.addAnimal(currentAnimal);
+            System.out.println(animal);
+            System.out.println(currentAnimal);
+            animauxService.saveAnimal(currentAnimal);
             return currentAnimal;
         } else {
             return null;

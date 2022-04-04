@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS `animaux`;
 CREATE TABLE `animaux`
 (
     `a_id`               INT NOT NULL AUTO_INCREMENT,
-    `nom_commun`         VARCHAR(255) UNIQUE,
+    `nom_commun`         VARCHAR(255),
     `genre`              VARCHAR(255),
     `espece`             VARCHAR(255),
     `embranchement`      VARCHAR(255),
