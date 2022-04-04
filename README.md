@@ -58,5 +58,5 @@
 ## Postman Collection
 We have created a [Postman](https://www.postman.com) Collection so you can easily test all the API endpoints wihtout developing and code. You can download the collection [here](https://app.getpostman.com/run-collection/28d95a2cf88535ca1daf) or just click the button below.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/47218c04af55316ff308)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0?action=collection%2Ffork&collection-url=entityId%3D14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0%26entityType%3Dcollection%26workspaceId%3D6baa53a4-e9a6-4a5c-b7a0-6f3c418b5d06)
 
