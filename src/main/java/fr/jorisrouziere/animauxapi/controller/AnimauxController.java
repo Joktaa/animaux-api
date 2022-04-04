@@ -27,11 +27,12 @@ public class AnimauxController {
 
     @PostMapping("/animal")
     public Animal addAnimal(@RequestBody AnimalDTO animalDTO) {
-        return animauxService.addAnimal(animalDTO);
+        Animal animal = animauxService.convertDTOToEntity(animalDTO);
+        return (animauxService.addAnimal(animal));
     }
 
-    @PutMapping("/animaux/{id}")
-    public Animal putAnimal(@PathVariable("id") final Long id,@RequestBody AnimalDTO animalDTO) {
+    @PutMapping("/animal/{id}")
+    public Animal putAnimal(@PathVariable("id") final Long id, @RequestBody AnimalDTO animalDTO) {
         Optional<Animal> animal = animauxService.getAnimal(id);
         if(animal.isPresent()) {
             Animal currentAnimal = animal.get();
@@ -97,7 +98,7 @@ public class AnimauxController {
                 currentAnimal.setImage(image);
             }
 
-            animauxService.addAnimal(animauxService.convertEntityToDTO(currentAnimal));
+            animauxService.addAnimal(currentAnimal);
             return currentAnimal;
         } else {
             return null;

@@ -6,6 +6,7 @@ import java.util.List;
 
 @Data
 public class AnimalDTO {
+    private Long a_id;
     private String nom_commun;
     private String genre;
     private String espece;

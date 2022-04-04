@@ -78,25 +78,16 @@ VALUES ('Coelacanthe', 'Latimeria', 'Chalumnae', 'Chordes', 'Vertébré', 'Coelo
     'Danger critique d extinction', 'coelacanthe');
 
 INSERT INTO `physique` (`id_animal`, `description`)
-VALUES (1, 'Peut dépasser les deux mètres');
-
-INSERT INTO `physique` (`id_animal`, `description`)
-VALUES (1, 'Vit 48 ans');
+VALUES (1, 'Peut dépasser les deux mètres ; Vit 48 ans');
 
 INSERT INTO `sexe` (`id_animal`, `description`)
 VALUES (1, 'Les femelles sont plus grandes que les mâles');
 
 INSERT INTO `vie` (`id_animal`, `description`)
-VALUES (1, 'Se réfugie souvent dans des grottes');
-
-INSERT INTO `vie` (`id_animal`, `description`)
-VALUES (1, 'Chasseur nocturne');
+VALUES (1, 'Se réfugie souvent dans des grottes ; Chasseur nocturne');
 
 INSERT INTO `reproduction` (`id_animal`, `description`)
 VALUES (1, 'ovoviviparité');
 
 INSERT INTO `geographie` (`id_animal`, `description`)
-VALUES (1, 'Afrique Est');
-
-INSERT INTO `geographie` (`id_animal`, `description`)
-VALUES (1, 'Océan Indien');
+VALUES (1, 'Afrique Est ; Océan Indien');
