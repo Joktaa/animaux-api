@@ -48,10 +48,15 @@
 
 ## Documentation de l'API
 
-
 | HTTP request | Description
 | ------------- | ------------
 | **GET** https://animaux-api.herokuapp.com/api/animaux | Récupère tous les animaux
 | **GET** https://animaux-api.herokuapp.com/api/animal/{id} | Récupère l'animal passé en paramètre
 | **POST** https://animaux-api.herokuapp.com/api/animal | Créer un animal
 | **DELETE** https://animaux-api.herokuapp.com/api/animal/{id}| Supprime l'animal passé en paramètre
+
+## Postman Collection
+We have created a [Postman](https://www.postman.com) Collection so you can easily test all the API endpoints wihtout developing and code. You can download the collection [here](https://app.getpostman.com/run-collection/28d95a2cf88535ca1daf) or just click the button below.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/47218c04af55316ff308)
+
