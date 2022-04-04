@@ -37,7 +37,7 @@ public class AnimauxController {
         System.out.println(animal);
         if(animal.isPresent()) {
             Animal currentAnimal = animal.get();
-            Animal animalConvert= animauxService.convertDTOToEntityMapper(animalDTO);
+            Animal animalConvert= animauxService.convertDTOToEntity(animalDTO);
 
 
             String nom_commun=animalConvert.getNom_commun();
