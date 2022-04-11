@@ -64,6 +64,7 @@ Elle est actuellement reliée à l'application de fiche Animal créé sous Andro
 | **GET** https://animaux-api.herokuapp.com/api/animaux | Récupère tous les animaux
 | **GET** https://animaux-api.herokuapp.com/api/animal/{id} | Récupère l'animal passé en paramètre
 | **POST** https://animaux-api.herokuapp.com/api/animal | Créer un animal
+| **PUT** https://animaux-api.herokuapp.com/api/animal/{id} | Modifier un animal
 | **DELETE** https://animaux-api.herokuapp.com/api/animal/{id}| Supprime l'animal passé en paramètre
 
 ---
