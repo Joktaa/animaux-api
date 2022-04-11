@@ -1,5 +1,5 @@
 # Lancement
-##Introduction
+## Introduction
 L'api Animaux regroupe une collection complète d'animaux et vous permet de les gérer facilement.
 
 Cette API prend en charge le type de média JSON et utilise le codage de caractères UTF-8.
