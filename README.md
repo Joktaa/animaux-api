@@ -71,5 +71,4 @@ Elle est actuellement reliée à l'application de fiche Animal créé sous Andro
 ## Postman Collection
 Nous avons créé une collection Postman pour que vous puissiez facilement tester tous les points de terminaison de l'API sans avoir à développer et à coder.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0?action=collection%2Ffork&collection-url=entityId%3D14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0%26entityType%3Dcollection%26workspaceId%3D6baa53a4-e9a6-4a5c-b7a0-6f3c418b5d06)
-
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0?action=collection%2Ffork&collection-url=entityId%3D14102114-eaa917a9-53e2-423c-8f62-a7da5cf36ae0%26entityType%3Dcollection%26workspaceId%3D6baa53a4-e9a6-4a5c-b7a0-6f3c418b5d06)
