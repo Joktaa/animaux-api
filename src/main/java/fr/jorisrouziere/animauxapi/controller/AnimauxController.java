@@ -3,36 +3,51 @@ package fr.jorisrouziere.animauxapi.controller;
 import fr.jorisrouziere.animauxapi.DTO.AnimalDTO;
 import fr.jorisrouziere.animauxapi.model.*;
 import fr.jorisrouziere.animauxapi.service.AnimauxService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
+@Api(value= "/api", tags = "Animaux Api")
+@RequestMapping("/api")
 public class AnimauxController {
     @Autowired
     private AnimauxService animauxService;
 
+
     @GetMapping("/animal/{id}")
+    @ApiOperation(value = "Récupère l'animal passé en paramètre", response = Animal.class)
     public Animal getAnimal(@PathVariable("id") final Long id) {
         Optional<Animal> animal = animauxService.getAnimal(id);
         return animal.orElse(null);
     }
 
     @GetMapping("/animaux")
+    @ApiOperation(value = "Récupère tous les animaux", response = Iterable.class)
     public Iterable<Animal> getAnimaux() {
         return animauxService.getAnimaux();
     }
 
     @PostMapping("/animal")
+    @ApiOperation(value = "Créer un animal", response = Animal.class)
     public Animal addAnimal(@RequestBody AnimalDTO animalDTO) {
         Animal animal = animauxService.convertDTOToEntity(animalDTO);
         return animauxService.saveAnimal(animal);
     }
 
     @PutMapping("/animal/{id}")
+    @ApiOperation(value = "Modifier un animal", response = Animal.class)
     public Animal putAnimal(@PathVariable("id") final Long id, @RequestBody AnimalDTO animalDTO) {
         Optional<Animal> animal = animauxService.getAnimal(id);
         if(animal.isPresent()) {
@@ -128,6 +143,7 @@ public class AnimauxController {
     }
 
     @DeleteMapping("/animal/{id}")
+    @ApiOperation(value = "Supprime l'animal passé en paramètre", response = void.class)
     public void deleteAnimal(@PathVariable("id") final Long id) {
         animauxService.deleteAnimal(id);
     }
