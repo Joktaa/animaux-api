@@ -36,8 +36,8 @@ public class AnimauxController {
     @PostMapping("/animal")
     @ApiOperation(value = "Créer un animal", response = Animal.class)
     public Animal addAnimal(@RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) {
-        int uidInt=Integer.valueOf(uid);
-        if(uidInt !=0){
+
+        if(uid !=null && !uid.equals("")){
             Animal animal = animauxService.convertDTOToEntity(animalDTO);
             return animauxService.saveAnimal(animal);
         }else{
@@ -49,8 +49,7 @@ public class AnimauxController {
     @PutMapping("/animal/{id}")
     @ApiOperation(value = "Modifier un animal", response = Animal.class)
     public Animal putAnimal(@PathVariable("id") final Long id, @RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) {
-        int uidInt=Integer.valueOf(uid);
-        if(uidInt !=0){
+        if(uid !=null && !uid.equals("")){
             Optional<Animal> animal = animauxService.getAnimal(id);
             if(animal.isPresent()) {
                 Animal currentAnimal = animal.get();
@@ -151,8 +150,7 @@ public class AnimauxController {
     @DeleteMapping("/animal/{id}")
     @ApiOperation(value = "Supprime l'animal passé en paramètre", response = void.class)
     public void deleteAnimal(@PathVariable("id") final Long id,@RequestHeader("Uid") String uid) {
-        int uidInt=Integer.valueOf(uid);
-        if(uidInt !=0){
+        if(uid !=null && !uid.equals("")){
             animauxService.deleteAnimal(id);
         }
     }
