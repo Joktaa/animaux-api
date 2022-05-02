@@ -13,7 +13,7 @@ class AnimauxApiApplicationTests {
 
     private ModelMapper modelMapper = new ModelMapper();
 
-    @Test
+  /*  @Test
     public void ConvertAnimauxEntityToDto_ok(){
         Animal animal = new Animal();
         animal.setA_id(1L);
@@ -24,7 +24,7 @@ class AnimauxApiApplicationTests {
         assertEquals(animal.getA_id(), animalDTO.getA_id());
         assertEquals(animal.getNom_commun(), animal.getNom_commun());
         assertEquals(animal.getImage(), animal.getImage());
-    }
+    }*/
 
     /*@Test
     public void whenConvertPostEntityToPostDto_thenCorrect() {

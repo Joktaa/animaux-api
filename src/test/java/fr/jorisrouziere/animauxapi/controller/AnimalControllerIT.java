@@ -31,7 +31,7 @@ public class AnimalControllerIT {
     @Autowired
     private AnimauxService animauxService;
 
-    //TODO se mettre d'accord sur le premier animal
+   /* //TODO se mettre d'accord sur le premier animal
     @Test
     public void getEmployees_OK() throws Exception {
 
@@ -119,6 +119,6 @@ public class AnimalControllerIT {
         iterable2.forEach(animals2::add);
 
         Assertions.assertNotEquals(animals,animals2);
-    }
+    }*/
 
 }
