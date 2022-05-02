@@ -35,20 +35,20 @@ public class AnimauxController {
 
     @PostMapping("/animal")
     @ApiOperation(value = "Créer un animal", response = Animal.class)
-    public Animal addAnimal(@RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) {
+    public Animal addAnimal(@RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) throws Exception {
 
         if(uid !=null && !uid.equals("")){
             Animal animal = animauxService.convertDTOToEntity(animalDTO);
             return animauxService.saveAnimal(animal);
         }else{
-            return null;
+            throw new Exception("Bad authentification");
         }
 
     }
 
     @PutMapping("/animal/{id}")
     @ApiOperation(value = "Modifier un animal", response = Animal.class)
-    public Animal putAnimal(@PathVariable("id") final Long id, @RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) {
+    public Animal putAnimal(@PathVariable("id") final Long id, @RequestHeader("Uid") String uid,@RequestBody AnimalDTO animalDTO) throws Exception {
         if(uid !=null && !uid.equals("")){
             Optional<Animal> animal = animauxService.getAnimal(id);
             if(animal.isPresent()) {
@@ -139,19 +139,21 @@ public class AnimauxController {
                 animauxService.saveAnimal(currentAnimal);
                 return currentAnimal;
             } else {
-                return null;
+                throw new Exception("Bad animal");
             }
         }else{
-            return null;
+            throw new Exception("Bad authentification");
         }
 
     }
 
     @DeleteMapping("/animal/{id}")
     @ApiOperation(value = "Supprime l'animal passé en paramètre", response = void.class)
-    public void deleteAnimal(@PathVariable("id") final Long id,@RequestHeader("Uid") String uid) {
+    public void deleteAnimal(@PathVariable("id") final Long id,@RequestHeader("Uid") String uid) throws Exception {
         if(uid !=null && !uid.equals("")){
             animauxService.deleteAnimal(id);
+        }else{
+            throw new Exception("Bad authentification");
         }
     }
 }
